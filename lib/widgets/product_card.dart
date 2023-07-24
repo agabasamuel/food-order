@@ -3,18 +3,16 @@ import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
+  final double widthFactor;
 
-  const ProductCard({
-    super.key,
-    required this.product,
-  });
+  const ProductCard({super.key, required this.product, this.widthFactor = 2.5});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width / 2.5,
+          width: MediaQuery.of(context).size.width / widthFactor,
           height: 150,
           child: Image.network(
             product.imageUrl,
@@ -58,7 +56,7 @@ class ProductCard extends StatelessWidget {
                               .copyWith(color: Colors.white),
                         ),
                         Text(
-                          '\$${product.price}',
+                          '\UGX ${product.price}',
                           style: Theme.of(context)
                               .textTheme
                               .headline6!

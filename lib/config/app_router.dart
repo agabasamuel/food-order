@@ -1,3 +1,4 @@
+import 'package:car_spare/models/category_model.dart';
 import 'package:flutter/material.dart';
 // import '/models/models.dart';
 import '/screens/screens.dart';
@@ -19,9 +20,7 @@ class AppRouter {
             // product: settings.arguments as Product
             );
       case CatalogScreen.routeName:
-        return CatalogScreen.route(
-            //category: settings.arguments as Category
-            );
+        return CatalogScreen.route(category: settings.arguments as Category);
       case WishlistScreen.routeName:
         return WishlistScreen.route();
       // case CheckoutScreen.routeName:
