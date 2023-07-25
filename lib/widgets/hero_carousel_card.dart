@@ -3,20 +3,25 @@ import 'package:car_spare/models/model.dart';
 
 class HeroCarouselCard extends StatelessWidget {
   // const HeroCarouselCard({super.key});
-  final Category category;
+  final Category? category;
+  final Product? product;
 
   const HeroCarouselCard({
-    required this.category,
+    Key? key,
+    this.category,
+    this.product,
   });
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          '/catalog',
-          arguments: category,
-        );
+        if (this.product == null) {
+          Navigator.pushNamed(
+            context,
+            '/catalog',
+            arguments: category,
+          );
+        }
       },
       child: Container(
         margin: EdgeInsets.symmetric(
@@ -28,7 +33,7 @@ class HeroCarouselCard extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Image.network(
-                category.imageUrl,
+                product == null ? category!.imageUrl : product!.imageUrl,
                 fit: BoxFit.cover,
                 width: 1000.0,
               ),
@@ -50,7 +55,7 @@ class HeroCarouselCard extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                   child: Text(
-                    category.name,
+                    product == null ? category!.name : product!.name,
                     style: Theme.of(context).textTheme.headline2!.copyWith(
                           color: Colors.white,
                         ),
