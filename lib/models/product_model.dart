@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
 
@@ -33,19 +34,19 @@ class Product extends Equatable {
     this.description,
   });
 
-  // static Product fromSnapshot(DocumentSnapshot snap) {
-  //   Product product = Product(
-  //     id: snap.id,
-  //     name: snap['name'],
-  //     category: snap['category'],
-  //     imageUrl: snap['imageUrl'],
-  //     price: snap['price'],
-  //     isRecommended: snap['isRecommended'],
-  //     isPopular: snap['isPopular'],
-  //     description: snap['description'],
-  //   );
-  //   return product;
-  // }
+  static Product fromSnapshot(DocumentSnapshot snap) {
+    Product product = Product(
+      id: snap.id,
+      name: snap['name'],
+      category: snap['category'],
+      imageUrl: snap['imageUrl'],
+      price: snap['price'],
+      isRecommended: snap['isRecommended'],
+      isPopular: snap['isPopular'],
+      description: snap['description'],
+    );
+    return product;
+  }
 
   @override
   List<Object?> get props => [
@@ -231,4 +232,6 @@ class Product extends Equatable {
       isPopular: false,
     ),
   ];
+
+  // static fromSnapshot(QueryDocumentSnapshot<Map<String, dynamic>> doc) {}
 }

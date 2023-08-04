@@ -39,7 +39,18 @@ dependencies:
   carousel_slider: ^4.2.1
   equatable: ^2.0.0
   hive: ^2.2.3
-
+  bloc: ^8.1.2
+  hive_flutter: ^1.1.0
+  flutter_bloc: ^8.0.1
+  flutter_svg: ^1.0.0
+  pay: ^1.0.7 
+  firebase_core: ^2.15.0
+  cloud_firestore: ^4.8.4
+  firebase_auth: ^4.7.2
+  get: ^4.6.5
+  cached_network_image: ^3.2.3
+  image_picker: ^1.0.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

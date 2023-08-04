@@ -1,7 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import '../../blocs/blocs.dart';
-// import '/models/models.dart';
+// import '/models/model.dart';
 // import '/widgets/widgets.dart';
 
 // class CatalogScreen extends StatelessWidget {
@@ -96,7 +96,7 @@ class CatalogScreen extends StatelessWidget {
         .toList();
     return Scaffold(
       appBar: CustomAppBar(title: category.name),
-      bottomNavigationBar: CustomNavBar(),
+      bottomNavigationBar: CustomNavBar(screen: routeName),
       body: GridView.builder(
         padding: const EdgeInsets.symmetric(
           horizontal: 10.0,
@@ -109,9 +109,12 @@ class CatalogScreen extends StatelessWidget {
         itemCount: categoryProducts.length,
         itemBuilder: (BuildContext context, int index) {
           return Center(
-            child: ProductCard(
+            // child: ProductCard(
+            //   product: categoryProducts[index],
+            //   widthFactor: 2.2,
+            // ),
+            child: ProductCard.catalog(
               product: categoryProducts[index],
-              widthFactor: 2.2,
             ),
           );
         },

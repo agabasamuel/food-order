@@ -10,6 +10,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import '../../widgets/widgets.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -25,7 +28,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: 'CarSpare'),
-      bottomNavigationBar: CustomNavBar(),
+      bottomNavigationBar: CustomNavBar(screen: routeName),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -45,6 +48,7 @@ class HomeScreen extends StatelessWidget {
                     .toList(),
               ),
             ),
+
             SectionTitle(title: 'RECOMMENDED'),
             //Product Card
             // ProductCard(
