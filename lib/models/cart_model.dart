@@ -23,26 +23,26 @@ class Cart extends Equatable {
     return quantity;
   }
 
-  double get subtotal =>
+  num get subtotal =>
       products.fold(0, (total, current) => total + current.price);
 
-  double deliveryFee(subtotal) {
-    if (subtotal >= 900.0) {
-      return 0.0;
+  num deliveryFee(subtotal) {
+    if (subtotal >= 3000) {
+      return 0;
     } else
-      return 10.0;
+      return 100;
   }
 
   String freeDelivery(subtotal) {
-    if (subtotal >= 900.0) {
+    if (subtotal >= 3000) {
       return 'You have Free Delivery';
     } else {
-      double missing = 900.0 - subtotal;
+      num missing = 3000 - subtotal;
       return 'Add \UGX${missing.toStringAsFixed(2)} for FREE Delivery';
     }
   }
 
-  double total(subtotal, deliveryFee) {
+  num total(subtotal, deliveryFee) {
     return subtotal + deliveryFee(subtotal);
   }
 

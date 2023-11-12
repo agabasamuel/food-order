@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'CarSpare'),
+      appBar: CustomAppBar(title: 'FoodOrder'),
       bottomNavigationBar: CustomNavBar(screen: routeName),
       body: SingleChildScrollView(
         child: Column(

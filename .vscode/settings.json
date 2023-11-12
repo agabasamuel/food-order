@@ -1,0 +1,5 @@
+{
+    "scm.alwaysShowActions": false,
+    "scm.alwaysShowRepositories": false,
+    "git.optimisticUpdate": true
+}

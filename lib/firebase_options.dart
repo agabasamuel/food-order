@@ -44,39 +44,41 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '',
+    apiKey: 'AIzaSyBT4WXj9FnCA_ih7W1_tDoa1jKJYUP45JE',
+    appId: '1:535956556233:web:4b7a81ba50d49009428018',
+    messagingSenderId: '535956556233',
     projectId: 'marketplace-c8c6f',
     authDomain: 'marketplace-c8c6f.firebaseapp.com',
     storageBucket: 'marketplace-c8c6f.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '',
+    apiKey: 'AIzaSyBmNtrleP09lbxL5ITSS7tyWGbUab8OSjg',
+    appId: '1:535956556233:android:5feef61b7d0621c3428018',
+    messagingSenderId: '535956556233',
     projectId: 'marketplace-c8c6f',
     storageBucket: 'marketplace-c8c6f.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: '',
-    appId: '',
+    apiKey: 'AIzaSyCNguV3vX5IHMkNXgVf-WnO3VcBLi8vftI',
+    appId: '1:535956556233:ios:00fc1078f8d9ae31428018',
     messagingSenderId: '535956556233',
     projectId: 'marketplace-c8c6f',
     storageBucket: 'marketplace-c8c6f.appspot.com',
-    iosClientId: '535956556233-qmh91niviq9d2200sf71gjrnvm6vvc5e.apps.googleusercontent.com',
+    iosClientId:
+        '535956556233-qmh91niviq9d2200sf71gjrnvm6vvc5e.apps.googleusercontent.com',
     iosBundleId: 'com.example.carSpare',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: '',
-    appId: '',
+    apiKey: 'AIzaSyCNguV3vX5IHMkNXgVf-WnO3VcBLi8vftI',
+    appId: '1:535956556233:ios:16b5dfc89df1e837428018',
     messagingSenderId: '535956556233',
     projectId: 'marketplace-c8c6f',
     storageBucket: 'marketplace-c8c6f.appspot.com',
-    iosClientId: '535956556233-2tmg3gg0n0857tndlov3mlu73uf4u07o.apps.googleusercontent.com',
+    iosClientId:
+        '535956556233-2tmg3gg0n0857tndlov3mlu73uf4u07o.apps.googleusercontent.com',
     iosBundleId: 'com.example.carSpare.RunnerTests',
   );
 }

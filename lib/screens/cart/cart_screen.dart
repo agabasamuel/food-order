@@ -70,21 +70,26 @@ class CartScreen extends StatelessWidget {
                         state.cart.freeDeliveryString,
                         style: Theme.of(context).textTheme.headline5,
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
-                          shape: RoundedRectangleBorder(),
-                          elevation: 0,
-                        ),
-                        child: Text(
-                          'Add More Items',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline5!
-                              .copyWith(color: Colors.white),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.black,
+                            shape: StadiumBorder(),
+                            // shape: RoundedRectangleBorder(
+                            //   borderRadius: BorderRadius.circular(9.0),
+                            // ),
+                            elevation: 1,
+                          ),
+                          child: Text(
+                            'Add More Items',
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
                       ),
                     ],
